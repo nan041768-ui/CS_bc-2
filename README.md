@@ -58,3 +58,6 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
 
 - 클론 테스트 완료
+
+## 5. Git 로그 캡처 화면 (commit 내역들)
+![alt text](image-3.png)
