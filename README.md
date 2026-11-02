@@ -1,5 +1,14 @@
 # 파이썬 알아보기
 
+> ## <파일 구조>
+> `main.py`: 메인 게임 로직 및 클래스(Quiz, QuizGame) 코드
+> `state.json`: 퀴즈 데이터 및 점수 저장 파일
+> `README.md`: 프로젝트 설명 문서
+
+> ## <데이터 파일 설명 (`state.json`)>
+> 퀴즈 데이터 배열(quizzes), 최고 점수(best_score)를 저장하는 JSON 파일
+> 경로: 프로젝트 루트 디렉터리.
+
 ## 0. 초기 설정
 ![alt text](image.png)
 - `git init` 이제 이 폴더의 변경 사항을 Git이 추적함
