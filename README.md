@@ -35,4 +35,17 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ## 2. 파이썬 코드 작성 1 ( 기본 뼈대 & Quiz Class )
 *(main.py 코드 작성)*
 
+## 3. 파이썬 코드 작성 2 ( 퀴즈 풀기 & 점수 계산 로직 구현 )
+- main이 아닌 새로운 브랜치(분기점)에서 작업을 진행하고 합칩니다.
+- - **새 브랜치 생성 및 이동 (터미널 입력)**
+   `git checkout -b feature/play-quiz` (이제 안전한 독립 공간에서 작업)
+- main.py 파일 코드 수정 : if choice == 1: 부분을 찾아서 아래 코드로 덮어쓰기
+![alt text](image-2.png)
+
+## 4. 파이썬 코드 작성 3 ( 추가/목록/점수... 나머지 기능 완성 )
+- **`main.py` 파일 코드 수정**
+    - `if choice == 2:`, `3:`, `4:` 부분을 찾아서 각각 `self.add_quiz()`, `self.show_list()`, `self.show_score()` 로 수정
+    - `run(self):` 메서드 위쪽에 아래 메서드 3개 추가
+
+
 

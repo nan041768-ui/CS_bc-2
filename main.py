@@ -63,6 +63,40 @@ class QuizGame:
          Quiz("물이 끓는 온도는(섭씨)?", ["50도", "90도", "100도", "120도"], 3)
       ]
 
+   def add_quiz(self):
+      print("\n📌 새로운 퀴즈를 추가합니다.")
+      question = input("문제를 입력하세요: ").strip()
+      choices = []
+      for i in range(1, 5):
+         choice = input(f"선택지 {i}: ").strip()
+         choices.append(choice)
+
+      while True:
+         try:
+            answer = input("정답 번호 (1-4): ").strip()
+            answer = int(answer)
+            if 1 <= answer <= 4:
+               break
+            print("⚠️ 1-4 사이의 숫자를 입력하세요.")
+         except ValueError:
+            print("⚠️ 잘못된 입력입니다. 숫자를 입력하세요.")
+
+
+      new_quiz = Quiz(question, choices, answer)
+      self.quizzes.append(new_quiz)
+      self.save_data()
+      print("✅ 퀴즈가 추가되었습니다!")
+
+   def show_list(self):
+      print(f"\n📋 등록된 퀴즈 목록 (총 {len(self.quizzes)}개)")
+      print("-" * 40)
+      for i, quiz in enumerate(self.quizzes):
+            print(f"[{i+1}] {quiz.question}")
+      print("-" * 40)
+
+   def show_score(self):
+      print(f"\n🏆 최고 점수: {self.best_score}점")
+
    def run(self):
       while True:
          print("\n" + "="*40)
@@ -84,11 +118,11 @@ class QuizGame:
 
             if choice == 1:
                print("퀴즈 풀기 기능은 곧 추가됩니다.")
-            elif choice == 2:
+            elif choice == self.add_quiz():
                print("퀴즈 추가 기능은 곧 추가됩니다.")
-            elif choice == 3:
+            elif choice == self.show_list():
                print("퀴즈 목록 기능은 곧 추가됩니다.")
-            elif choice == 4:
+            elif choice == self.show_score():
                print("점수 확인 기능은 곧 추가됩니다.")
             elif choice == 5:
                print("게임을 종료합니다.")
