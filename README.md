@@ -57,4 +57,4 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
     - `run(self):` 메서드 위쪽에 아래 메서드 3개 추가
 
 
-
+- 클론 테스트 완료
